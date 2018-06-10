@@ -1,3 +1,14 @@
+// Utilities
+@import '_utils/variables',
+        '_utils/mixins';
+
 // Base Styles
 @import '_base/normalize',
         '_base/base';
+
+// Includes Styles
+@import '_includes/header',
+        '_includes/footer';
+
+// Layouts Styles
+@import '_layouts/home.scss';
