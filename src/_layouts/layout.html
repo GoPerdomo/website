@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WeNova</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeNova</title>
   <link rel="stylesheet" href="{{ "styles/style.css " | relative_url }}">
   <script>
     const setData = (data, portfolio) => {
 
       // Header
-      document.querySelector('.header--title').innerHTML = data.home.title;
-      document.querySelector('.header--subtitle').innerHTML = data.home.subtitle;
-      document.querySelector('.header--buttonText').innerHTML = data.home.buttonText;
+      document.querySelector('.banner__title').innerHTML = data.home.title;
+      document.querySelector('.banner__subtitle').innerHTML = data.home.subtitle;
+      document.querySelector('.banner__button').innerHTML = data.home.buttonText;
 
       // Sobre
       const paragraph = document.createElement('p');
