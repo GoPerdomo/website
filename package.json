@@ -4,10 +4,11 @@
   "description": "WebSpace Agency",
   "main": "app.js",
   "repository": "https://github.com/GoPerdomo/website.git",
-  "author": "Gabriel de O. Perdomo <goperdomo@gmail.com>",
+  "author": "Gabriel Perdomo <goperdomo@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "jekyll serve --livereload --source src"
+    "dev": "jekyll serve --livereload --source src",
+    "build": "jekyll build --source src"
   }
 }

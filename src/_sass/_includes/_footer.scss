@@ -1,0 +1,22 @@
+.footer {
+  padding: 1em;
+  color: white;
+  background-color: #2c447d;
+}
+
+.footer__navigation {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  h5 {
+    margin: 0 0 .5em;
+    font-size: 1em;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-bottom: .5em;
+    }
+  }
+}

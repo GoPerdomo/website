@@ -1,0 +1,128 @@
+.home {
+  margin-bottom: 3em;
+}
+
+.home__section {
+  padding-bottom: 3em;
+}
+
+.botao-mais {
+  padding: 0.7em 1.7em;
+  font-size: .9em;
+  color: white;
+  background-color: #2c447d;
+  border-radius: 20px;
+}
+
+.wrapper {
+  padding: 1em;
+}
+
+.wrapper h2 {
+  font-size: $font__section-title;
+}
+
+.wrapper>span {
+  font-size: $font__section-subtitle;
+}
+
+.wrapper>p {
+  font-size: $font__section-paragraph;
+}
+
+.carousel {
+  display: flex;
+  margin-top: 2em;
+  justify-content: space-between;
+  align-items: center;
+  background: url(https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5Ny85NTcvb3JpZ2luYWwvc3BhY2UuanBn) center/cover no-repeat;
+}
+
+.carousel-item {
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  background-color: white;
+}
+
+.carousel-item img {
+  margin: auto;
+}
+
+.carousel-item h4 {
+  font-size: 1.3em;
+}
+
+.carousel-item p {
+  margin: 0;
+  font-size: .9em;
+}
+
+#portfolio ul {
+  margin: 2em -1em 1em;
+}
+
+#portfolio li {
+  position: relative;
+  height: 200px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#portfolio li::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  background: url(https://placekitten.com/300/200) center center/cover no-repeat;
+}
+
+#portfolio h3 {
+  margin: 0;
+  font-size: 2.3em;
+}
+
+#contato {
+  position: relative;
+  color: white;
+}
+
+#contato::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .8;
+  background: url(https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5Ny85NTcvb3JpZ2luYWwvc3BhY2UuanBn) center/cover no-repeat;
+}
+
+#contato>form {
+  margin-top: 2em;
+}
+
+#contato .botao-mais {
+  color: #2c447d;
+  background-color: white;
+}
+
+.formarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.formarea>input,
+textarea {
+  margin: .5em 0 1em;
+}
+
+form>button {
+  width: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}

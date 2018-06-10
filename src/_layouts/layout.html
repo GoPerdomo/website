@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeNova</title>
+  <link rel="stylesheet" href="{{ "styles/style.css " | relative_url }}">
+  <script>
+    const setData = (data, portfolio) => {
+
+      // Header
+      document.querySelector('.banner__title').innerHTML = data.home.title;
+      document.querySelector('.banner__subtitle').innerHTML = data.home.subtitle;
+      document.querySelector('.banner__button').innerHTML = data.home.buttonText;
+
+      // Sobre
+      const paragraph = document.createElement('p');
+      paragraph.innerHTML = data.about.text;
+
+      document.querySelector('.sobre--title').innerHTML = data.about.title;
+      document.querySelector('.sobre--subtitle').innerHTML = data.about.subtitle;
+      document.querySelector('.sobre--text').appendChild(paragraph);
+      document.querySelector('.sobre--buttonText').innerHTML = data.about.buttonText;
+
+      document.querySelector('.carousel-item--boxTitle').innerHTML = data.about.boxTitle2;
+      document.querySelector('.carousel-item--boxText').innerHTML = data.about.boxText2;
+
+      // Portfolio
+      document.querySelector('.portfolio--title').innerHTML = data.portfolio.title;
+      document.querySelector('.portfolio--subtitle').innerHTML = data.portfolio.subtitle;
+
+      for (const item of portfolio) {
+        const ul = document.querySelector('.portfolio--list');
+        const li = document.createElement('li');
+        const h3 = document.createElement('h3');
+
+        h3.innerHTML = item.title;
+        li.appendChild(h3);
+        ul.appendChild(li);
+      }
+
+      // Contato
+      document.querySelector('.contato--title').innerHTML = data.contact.title;
+      document.querySelector('.contato--subtitle').innerHTML = data.contact.subtitle;
+      document.querySelector('.contato--formName').innerHTML = data.contact.formName;
+      document.querySelector('.contato--formEmail').innerHTML = data.contact.formEmail;
+      document.querySelector('.contato--formTelephone').innerHTML = data.contact.formTelephone;
+      document.querySelector('.contato--formMessage').innerHTML = data.contact.formMessage;
+    }
+
+    const getData = async setData => {
+      const data = await fetch('https://lucantas.pythonanywhere.com/easing?show=contents')
+        .then(res => res.json())
+        .then(data => data)
+
+      console.log(data);
+
+      const portfolio = await fetch('https://lucantas.pythonanywhere.com/easing/portfolio')
+        .then(res => res.json())
+        .then(portfolio => portfolio)
+
+      console.log(portfolio);
+
+      setData(data, portfolio);
+    };
+
+    getData(setData);
+  </script>
+</head>
+
+<body>
+
+  {%- include header.html -%}
+
+  {{ content }}
+
+  {%- include footer.html -%}
+
+</body>
+
+</html>
