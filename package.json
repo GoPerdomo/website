@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "app": "node app.js",
+    "start": "node app.js",
     "dev": "jekyll serve --livereload --source src",
     "build": "jekyll build --source src"
   },
